@@ -105,6 +105,9 @@ omit =
     homeassistant/components/envisalink.py
     homeassistant/components/*/envisalink.py
 
+    homeassistant/components/evohome.py
+    homeassistant/components/*/evohome.py
+
     homeassistant/components/fritzbox.py
     homeassistant/components/switch/fritzbox.py
 
@@ -510,6 +513,7 @@ omit =
     homeassistant/components/light/lw12wifi.py
     homeassistant/components/light/mystrom.py
     homeassistant/components/light/nanoleaf_aurora.py
+    homeassistant/components/light/opple.py
     homeassistant/components/light/osramlightify.py
     homeassistant/components/light/piglow.py
     homeassistant/components/light/rpi_gpio_pwm.py
@@ -679,6 +683,7 @@ omit =
     homeassistant/components/sensor/fritzbox_netmonitor.py
     homeassistant/components/sensor/gearbest.py
     homeassistant/components/sensor/geizhals.py
+    homeassistant/components/sensor/gitlab_ci.py
     homeassistant/components/sensor/gitter.py
     homeassistant/components/sensor/glances.py
     homeassistant/components/sensor/google_travel_time.py

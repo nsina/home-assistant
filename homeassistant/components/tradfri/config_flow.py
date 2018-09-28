@@ -77,6 +77,12 @@ class FlowHandler(config_entries.ConfigFlow):
 
     async def async_step_discovery(self, user_input):
         """Handle discovery."""
+        for entry in self._async_current_entries():
+            if entry.data[CONF_HOST] == user_input['host']:
+                return self.async_abort(
+                    reason='already_configured'
+                )
+
         self._host = user_input['host']
         return await self.async_step_auth()
 
@@ -95,7 +101,9 @@ class FlowHandler(config_entries.ConfigFlow):
 
         try:
             data = await get_gateway_info(
-                self.hass, user_input['host'], user_input['identity'],
+                self.hass, user_input['host'],
+                # Old config format had a fixed identity
+                user_input.get('identity', 'homeassistant'),
                 user_input['key'])
 
             data[CONF_IMPORT_GROUPS] = user_input[CONF_IMPORT_GROUPS]
