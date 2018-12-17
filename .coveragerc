@@ -73,7 +73,8 @@ omit =
     homeassistant/components/comfoconnect.py
     homeassistant/components/*/comfoconnect.py
 
-    homeassistant/components/daikin.py
+    homeassistant/components/daikin/__init__.py
+    homeassistant/components/daikin/const.py
     homeassistant/components/*/daikin.py
 
     homeassistant/components/digital_ocean.py
@@ -116,6 +117,9 @@ omit =
 
     homeassistant/components/ecovacs.py
     homeassistant/components/*/ecovacs.py
+
+    homeassistant/components/esphome/__init__.py
+    homeassistant/components/*/esphome.py
 
     homeassistant/components/eufy.py
     homeassistant/components/*/eufy.py
@@ -698,6 +702,7 @@ omit =
     homeassistant/components/sensor/bme680.py
     homeassistant/components/sensor/bom.py
     homeassistant/components/sensor/broadlink.py
+    homeassistant/components/sensor/brottsplatskartan.py
     homeassistant/components/sensor/buienradar.py
     homeassistant/components/sensor/cert_expiry.py
     homeassistant/components/sensor/citybikes.py
