@@ -22,7 +22,6 @@ from homeassistant.const import (
     ATTR_TEMPERATURE, CONF_HOST, CONF_NAME, TEMP_CELSIUS)
 import homeassistant.helpers.config_validation as cv
 
-REQUIREMENTS = ['pydaikin==0.8']
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -266,3 +265,8 @@ class DaikinClimate(ClimateDevice):
     def update(self):
         """Retrieve latest state."""
         self._api.update()
+
+    @property
+    def device_info(self):
+        """Return a device description for device registry."""
+        return self._api.device_info

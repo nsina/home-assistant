@@ -15,13 +15,14 @@ import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOSTS
 import homeassistant.helpers.config_validation as cv
+from homeassistant.helpers.device_registry import CONNECTION_NETWORK_MAC
 from homeassistant.helpers.typing import HomeAssistantType
 from homeassistant.util import Throttle
 
 from . import config_flow  # noqa  pylint_disable=unused-import
 from .const import KEY_HOST
 
-REQUIREMENTS = ['pydaikin==0.8']
+REQUIREMENTS = ['pydaikin==0.9']
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -129,4 +130,17 @@ class DaikinApi:
     @property
     def mac(self):
         """Return mac-address of device."""
-        return self.device.values.get('mac')
+        return self.device.values.get(CONNECTION_NETWORK_MAC)
+
+    @property
+    def device_info(self):
+        """Return a device description for device registry."""
+        info = self.device.values
+        return {
+            'connections': {(CONNECTION_NETWORK_MAC, self.mac)},
+            'identifieres': self.mac,
+            'manufacturer': 'Daikin',
+            'model': info.get('model'),
+            'name': info.get('name'),
+            'sw_version': info.get('ver').replace('_', '.'),
+        }

@@ -112,6 +112,9 @@ omit =
     homeassistant/components/evohome.py
     homeassistant/components/*/evohome.py
 
+    homeassistant/components/freebox.py
+    homeassistant/components/*/freebox.py
+
     homeassistant/components/fritzbox.py
     homeassistant/components/*/fritzbox.py
 
@@ -164,6 +167,9 @@ omit =
     homeassistant/components/homematicip_cloud.py
     homeassistant/components/*/homematicip_cloud.py
 
+    homeassistant/components/homeworks.py
+    homeassistant/components/*/homeworks.py
+
     homeassistant/components/huawei_lte.py
     homeassistant/components/*/huawei_lte.py
 
@@ -206,6 +212,9 @@ omit =
 
     homeassistant/components/lametric.py
     homeassistant/components/*/lametric.py
+
+    homeassistant/components/lcn.py
+    homeassistant/components/*/lcn.py
 
     homeassistant/components/linode.py
     homeassistant/components/*/linode.py
@@ -431,6 +440,7 @@ omit =
     homeassistant/components/spider.py
     homeassistant/components/*/spider.py
 
+    homeassistant/components/air_pollutants/opensensemap.py
     homeassistant/components/alarm_control_panel/alarmdotcom.py
     homeassistant/components/alarm_control_panel/canary.py
     homeassistant/components/alarm_control_panel/concord232.py
@@ -504,7 +514,6 @@ omit =
     homeassistant/components/device_tracker/bt_smarthub.py
     homeassistant/components/device_tracker/cisco_ios.py
     homeassistant/components/device_tracker/ddwrt.py
-    homeassistant/components/device_tracker/freebox.py
     homeassistant/components/device_tracker/fritz.py
     homeassistant/components/device_tracker/google_maps.py
     homeassistant/components/device_tracker/googlehome.py
@@ -689,6 +698,7 @@ omit =
     homeassistant/components/route53.py
     homeassistant/components/scene/hunterdouglas_powerview.py
     homeassistant/components/scene/lifx_cloud.py
+    homeassistant/components/sensor/aftership.py
     homeassistant/components/sensor/airvisual.py
     homeassistant/components/sensor/alpha_vantage.py
     homeassistant/components/sensor/ambient_station.py
@@ -748,6 +758,7 @@ omit =
     homeassistant/components/sensor/google_travel_time.py
     homeassistant/components/sensor/gpsd.py
     homeassistant/components/sensor/gtfs.py
+    homeassistant/components/sensor/gtt.py
     homeassistant/components/sensor/haveibeenpwned.py
     homeassistant/components/sensor/hp_ilo.py
     homeassistant/components/sensor/htu21d.py
@@ -797,6 +808,7 @@ omit =
     homeassistant/components/sensor/pocketcasts.py
     homeassistant/components/sensor/pollen.py
     homeassistant/components/sensor/postnl.py
+    homeassistant/components/sensor/prezzibenzina.py
     homeassistant/components/sensor/pushbullet.py
     homeassistant/components/sensor/pvoutput.py
     homeassistant/components/sensor/pyload.py
@@ -821,6 +833,7 @@ omit =
     homeassistant/components/sensor/snmp.py
     homeassistant/components/sensor/sochain.py
     homeassistant/components/sensor/socialblade.py
+    homeassistant/components/sensor/solaredge.py
     homeassistant/components/sensor/sonarr.py
     homeassistant/components/sensor/speedtest.py
     homeassistant/components/sensor/spotcrime.py
@@ -876,6 +889,7 @@ omit =
     homeassistant/components/switch/mystrom.py
     homeassistant/components/switch/netio.py
     homeassistant/components/switch/orvibo.py
+    homeassistant/components/switch/pencom.py
     homeassistant/components/switch/pulseaudio_loopback.py
     homeassistant/components/switch/rainbird.py
     homeassistant/components/switch/rest.py
