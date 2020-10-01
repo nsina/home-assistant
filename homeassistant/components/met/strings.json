@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Location",
+        "description": "Meteorologisk institutt",
+        "data": {
+          "name": "Name",
+          "latitude": "[%key:common::config_flow::data::latitude%]",
+          "longitude": "[%key:common::config_flow::data::longitude%]",
+          "elevation": "Elevation"
+        }
+      }
+    },
+    "error": { "name_exists": "Location already exists" }
+  }
+}
